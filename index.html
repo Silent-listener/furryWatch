@@ -1,119 +1,522 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aura Ecosystem / FurryWatch</title>
-    <link rel="stylesheet" href="css/styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PawGuard 360 - The Ultimate Pet Care Ecosystem</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/umd/lucide.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .clip-path-slant {
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        }
+        .animate-pulse-slow {
+            animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: .7; }
+        }
+    </style>
 </head>
-<body>
-    <header class="hero">
-        <div class="hero-content">
-            <h1>Aura Ecosystem / FurryWatch</h1>
-            <p class="subtitle">A Modular Pet Safety & Monitoring Ecosystem</p>
-            <p class="tagline">Wearables • Smart Crates • AI Health Monitoring • Unified App</p>
+<body class="bg-slate-50 text-slate-800">
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-2">
+                    <i data-lucide="paw-print" class="h-8 w-8 text-teal-600 fill-current"></i>
+                    <span class="font-bold text-xl tracking-tight text-slate-900">PawGuard 360</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#features" class="text-slate-600 hover:text-teal-600 transition">Features</a>
+                    <a href="#app" class="text-slate-600 hover:text-teal-600 transition">The App</a>
+                    <a href="#rewards" class="text-slate-600 hover:text-teal-600 transition">Rewards</a>
+                    <a href="#faq" class="text-slate-600 hover:text-teal-600 transition">FAQ</a>
+                </div>
+                <button onclick="document.getElementById('rewards').scrollIntoView({behavior: 'smooth'})" class="bg-teal-600 hover:bg-teal-700 text-white px-6 py-2 rounded-full font-medium transition shadow-lg shadow-teal-600/20">
+                    Back this Project
+                </button>
+            </div>
         </div>
-    </header>
+    </nav>
 
-    <section id="executive-summary" class="section">
-        <h2>Executive Summary</h2>
-        <p>
-            The Aura Ecosystem (FurryWatch) is a fully integrated pet safety, health, and behavior monitoring system. 
-            It unifies a smart e-collar, intelligent crate, and AI-powered camera into one ecosystem controlled by a 
-            single mobile app. Designed for reliability, predictive care, and real-time remote interaction, Aura delivers 
-            continuous monitoring through hybrid Wi-Fi/cellular connectivity and a single subscription model. 
-            Aura solves the fragmentation and inefficiencies of current pet tech by offering a cohesive, automated, and 
-            intelligent pet care platform.
-        </p>
-    </section>
+    <!-- Hero Section -->
+    <div class="relative bg-slate-900 text-white overflow-hidden pb-16 lg:pb-24">
+        <div class="absolute inset-0">
+            <div class="absolute inset-0 bg-gradient-to-br from-teal-900/40 to-slate-900/90 mix-blend-multiply"></div>
+            <!-- Abstract background shapes -->
+            <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-teal-500/10 blur-3xl"></div>
+            <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-indigo-500/10 blur-3xl"></div>
+        </div>
 
-    <section id="problems" class="section alt">
-        <h2>Problems We Solve</h2>
-        <ul>
-            <li><strong>Fragmented Devices:</strong> Current GPS trackers, cameras, feeders, and health monitors each require separate apps and subscriptions.</li>
-            <li><strong>Poor Connectivity:</strong> Most devices rely solely on Wi-Fi and fail when the connection drops.</li>
-            <li><strong>Lack of Intelligence:</strong> Existing systems rarely include AI for behavioral or health anomaly detection.</li>
-            <li><strong>No Automation:</strong> Current solutions cannot take automated environmental action.</li>
-            <li><strong>Limited Remote Control:</strong> Owners cannot intervene in real time when away.</li>
-        </ul>
-    </section>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 lg:pt-24">
+            <div class="lg:grid lg:grid-cols-12 lg:gap-16 items-center">
+                
+                <!-- Hero Content -->
+                <div class="lg:col-span-7 space-y-8">
+                    <div class="inline-flex items-center px-3 py-1 rounded-full bg-teal-500/10 border border-teal-500/20 text-teal-400 text-sm font-medium">
+                        <span class="animate-pulse mr-2 h-2 w-2 rounded-full bg-teal-400"></span>
+                        Live on Kickstarter
+                    </div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                        Complete Pet Care. <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-emerald-400">One Unified Ecosystem.</span>
+                    </h1>
+                    <p class="text-lg text-slate-300 max-w-2xl">
+                        Smart Camera. GPS Collar. Intelligent Crate. Connected by a single app to monitor health, location, and behavior. Peace of mind has arrived.
+                    </p>
 
-    <section id="solution" class="section">
-        <h2>Our Solution</h2>
-        <p>
-            The Aura Ecosystem connects three smart devices—an AI camera, GPS/health monitoring e-collar, and intelligent crate—
-            through a unified app with continuous data sharing. The system uses AI for predictive alerts, supports automated crate adjustments,
-            enables real-time interventions, and prevents downtime with hybrid connectivity.
-        </p>
-    </section>
+                    <!-- Funding Stats -->
+                    <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+                        <div class="flex flex-col space-y-4">
+                            <div class="w-full bg-slate-700 rounded-full h-3">
+                                <div class="bg-gradient-to-r from-teal-400 to-emerald-400 h-3 rounded-full" style="width: 78%"></div>
+                            </div>
+                            <div class="grid grid-cols-3 gap-4 text-center divide-x divide-white/10">
+                                <div>
+                                    <div class="text-2xl font-bold text-white">$156,400</div>
+                                    <div class="text-xs text-slate-400 uppercase tracking-wider">pledged</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold text-white">78%</div>
+                                    <div class="text-xs text-slate-400 uppercase tracking-wider">funded</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold text-white">24</div>
+                                    <div class="text-xs text-slate-400 uppercase tracking-wider">days to go</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-    <section id="features" class="section alt">
-        <h2>Key Features</h2>
-        <div class="features-grid">
-            <div class="feature">AI Health & Behavior Monitoring</div>
-            <div class="feature">GPS Tracking & Geofencing</div>
-            <div class="feature">Smart Crate Environmental Control</div>
-            <div class="feature">Two-Way Audio & Camera Monitoring</div>
-            <div class="feature">Medication & Feeding Management</div>
-            <div class="feature">Single-App Unified Control</div>
-            <div class="feature">Hybrid Wi-Fi + Cellular Connectivity</div>
-            <div class="feature">Local Mobile Storage for Privacy</div>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button onclick="document.getElementById('rewards').scrollIntoView({behavior: 'smooth'})" class="px-8 py-4 bg-teal-500 hover:bg-teal-600 text-white font-bold rounded-xl transition shadow-lg shadow-teal-500/25 flex items-center justify-center">
+                            Pre-order Now
+                            <i data-lucide="arrow-right" class="ml-2 h-5 w-5"></i>
+                        </button>
+                        <button class="px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl backdrop-blur-sm transition flex items-center justify-center border border-white/10">
+                            <i data-lucide="play-circle" class="mr-2 h-5 w-5"></i>
+                            Watch Video
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Hero Image Placeholder -->
+                <div class="lg:col-span-5 mt-12 lg:mt-0">
+                    <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-white/10 bg-gradient-to-b from-slate-800 to-slate-900 aspect-[4/5] flex flex-col items-center justify-center group">
+                        <!-- Abstract Representation of the Ecosystem -->
+                        <div class="relative w-64 h-64">
+                            <!-- Center App -->
+                            <div class="absolute inset-0 flex items-center justify-center z-20">
+                                <div class="w-24 h-48 bg-slate-900 border-4 border-slate-700 rounded-3xl shadow-2xl flex flex-col items-center pt-4">
+                                    <div class="w-16 h-24 bg-teal-500/20 rounded-lg animate-pulse-slow"></div>
+                                </div>
+                            </div>
+                            <!-- Orbiting Devices -->
+                            <div class="absolute top-0 right-0 p-4 bg-slate-800 rounded-xl shadow-lg border border-slate-700 z-10 animate-bounce" style="animation-duration: 3s;">
+                                <i data-lucide="camera" class="h-8 w-8 text-teal-400"></i>
+                                <span class="text-xs text-slate-400 block mt-1">Cam</span>
+                            </div>
+                            <div class="absolute bottom-10 -left-4 p-4 bg-slate-800 rounded-xl shadow-lg border border-slate-700 z-10 animate-bounce" style="animation-duration: 4s;">
+                                <i data-lucide="map-pin" class="h-8 w-8 text-orange-400"></i>
+                                <span class="text-xs text-slate-400 block mt-1">Collar</span>
+                            </div>
+                            <div class="absolute -bottom-8 right-10 p-4 bg-slate-800 rounded-xl shadow-lg border border-slate-700 z-10 animate-bounce" style="animation-duration: 5s;">
+                                <i data-lucide="box" class="h-8 w-8 text-indigo-400"></i>
+                                <span class="text-xs text-slate-400 block mt-1">Crate</span>
+                            </div>
+                        </div>
+                        <p class="mt-12 text-slate-400 text-sm font-medium">Interactive Ecosystem Demo</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Problem / Solution -->
+    <section class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-slate-900 mb-6">The Problem: Fragmented Care</h2>
+            <p class="text-lg text-slate-600 mb-12">
+                Pet owners currently juggle 3-4 different apps: one for the camera, one for the GPS tracker, and another for health records. It's expensive, confusing, and disconnects you from your pet's actual needs.
+            </p>
+            
+            <div class="relative p-8 bg-slate-50 rounded-3xl border border-slate-200">
+                <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-teal-600 text-white px-4 py-1 rounded-full text-sm font-bold uppercase tracking-wide">The Solution</div>
+                <h3 class="text-2xl font-bold text-slate-900 mt-4 mb-4">PawGuard 360 Ecosystem</h3>
+                <p class="text-slate-600">
+                    We integrated everything. The intelligent crate talks to the collar. The camera syncs with health data. All controlled by one intuitive app with a single affordable subscription.
+                </p>
+            </div>
         </div>
     </section>
 
-    <section id="advantages" class="section">
-        <h2>Competitive Advantages & IP Highlights</h2>
-        <ul>
-            <li><strong>True Integration:</strong> Wearables, cameras, and environmental hardware communicate in real time.</li>
-            <li><strong>AI-Driven Predictive Monitoring:</strong> Detects abnormalities earlier than traditional devices.</li>
-            <li><strong>Local Mobile Storage:</strong> Ensures security, speed, and user ownership of audio/video data.</li>
-            <li><strong>Single Subscription:</strong> Covers all devices—no extra fees.</li>
-            <li><strong>Modular Ecosystem:</strong> Easily expandable with future devices and features.</li>
-        </ul>
+    <!-- Features Grid -->
+    <section id="features" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-teal-600 font-semibold tracking-wide uppercase text-sm mb-2">Hardware Features</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-slate-900">Three Devices. One Mind.</h3>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Camera -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition duration-300 border border-slate-100 group">
+                    <div class="h-14 w-14 bg-teal-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-teal-600 transition duration-300">
+                        <i data-lucide="video" class="h-7 w-7 text-teal-600 group-hover:text-white transition"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Smart Sentinel Camera</h4>
+                    <p class="text-slate-600 mb-4">AI-powered monitoring that distinguishes between playing, sleeping, and distress.</p>
+                    <ul class="space-y-2 text-sm text-slate-500">
+                        <li class="flex items-center"><i data-lucide="check" class="h-4 w-4 text-teal-500 mr-2"></i> 1080p Night Vision</li>
+                        <li class="flex items-center"><i data-lucide="check" class="h-4 w-4 text-teal-500 mr-2"></i> Two-way Audio</li>
+                        <li class="flex items-center"><i data-lucide="check" class="h-4 w-4 text-teal-500 mr-2"></i> Treat Dispenser Compatible</li>
+                    </ul>
+                </div>
+
+                <!-- Collar -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition duration-300 border border-slate-100 group">
+                    <div class="h-14 w-14 bg-orange-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-orange-500 transition duration-300">
+                        <i data-lucide="locate-fixed" class="h-7 w-7 text-orange-600 group-hover:text-white transition"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Guardian GPS Collar</h4>
+                    <p class="text-slate-600 mb-4">Real-time location tracking combined with vital sign monitoring (Heart Rate, Temp).</p>
+                    <ul class="space-y-2 text-sm text-slate-500">
+                        <li class="flex items-center"><i data-lucide="check" class="h-4 w-4 text-orange-500 mr-2"></i> Global LTE Tracking</li>
+                        <li class="flex items-center"><i data-lucide="check" class="h-4 w-4 text-orange-500 mr-2"></i> Activity & Sleep Analysis</li>
+                        <li class="flex items-center"><i data-lucide="check" class="h-4 w-4 text-orange-500 mr-2"></i> Waterproof (IP68)</li>
+                    </ul>
+                </div>
+
+                <!-- Crate -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition duration-300 border border-slate-100 group">
+                    <div class="h-14 w-14 bg-indigo-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-indigo-600 transition duration-300">
+                        <i data-lucide="home" class="h-7 w-7 text-indigo-600 group-hover:text-white transition"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Sanctuary Smart Crate</h4>
+                    <p class="text-slate-600 mb-4">More than a cage. It's an automated care station for safety and comfort.</p>
+                    <ul class="space-y-2 text-sm text-slate-500">
+                        <li class="flex items-center"><i data-lucide="check" class="h-4 w-4 text-indigo-500 mr-2"></i> Auto-locking Mechanism</li>
+                        <li class="flex items-center"><i data-lucide="check" class="h-4 w-4 text-indigo-500 mr-2"></i> Timed Med Dispenser</li>
+                        <li class="flex items-center"><i data-lucide="check" class="h-4 w-4 text-indigo-500 mr-2"></i> Climate Sensor</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="technical" class="section alt">
-        <h2>Technical Overview</h2>
-        <p>The system consists of three interconnected hardware components:</p>
-        <ul>
-            <li><strong>Smart E-Collar:</strong> Tracks vitals (heart rate, temperature), GPS location, stress indicators, and movement patterns.</li>
-            <li><strong>AI Camera Unit:</strong> Performs real-time behavior classification and security monitoring.</li>
-            <li><strong>Smart Crate:</strong> Automatically adjusts temperature, humidity, and lighting based on real-time pet data.</li>
-        </ul>
-        <p>All devices sync with the Aura mobile app and cloud services through both Wi-Fi and cellular fallback.</p>
+    <!-- App Showcase Section -->
+    <section id="app" class="py-24 bg-slate-900 text-white overflow-hidden relative">
+        <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+            <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                        <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="1"/>
+                    </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#grid)" />
+            </svg>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="lg:grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-teal-400 font-semibold tracking-wide uppercase text-sm mb-2">The Control Center</h2>
+                    <h3 class="text-4xl font-bold mb-6">One App to Rule Them All</h3>
+                    <p class="text-slate-300 text-lg mb-8">
+                        Forget switching between apps. The PawGuard app consolidates video feeds, location data, and health metrics into a single dashboard.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-teal-500 text-white">
+                                    <i data-lucide="activity" class="h-6 w-6"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-medium">Real-time Health Insights</h4>
+                                <p class="mt-2 text-slate-400">Receive alerts if your pet's temperature rises or activity levels drop unexpectedly.</p>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-teal-500 text-white">
+                                    <i data-lucide="map" class="h-6 w-6"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-medium">Geofencing</h4>
+                                <p class="mt-2 text-slate-400">Set safe zones. If the collar breaches the zone, the crate can auto-unlock for return, or lock for safety.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-12 lg:mt-0 flex justify-center">
+                    <!-- Mobile App Mockup -->
+                    <div class="relative mx-auto border-gray-800 bg-gray-800 border-[14px] rounded-[2.5rem] h-[600px] w-[300px] shadow-2xl">
+                        <div class="h-[32px] w-[3px] bg-gray-800 absolute -left-[17px] top-[72px] rounded-l-lg"></div>
+                        <div class="h-[46px] w-[3px] bg-gray-800 absolute -left-[17px] top-[124px] rounded-l-lg"></div>
+                        <div class="h-[46px] w-[3px] bg-gray-800 absolute -left-[17px] top-[178px] rounded-l-lg"></div>
+                        <div class="h-[64px] w-[3px] bg-gray-800 absolute -right-[17px] top-[142px] rounded-r-lg"></div>
+                        <div class="rounded-[2rem] overflow-hidden w-full h-full bg-slate-100 relative">
+                            <!-- Screen Content -->
+                            <div class="bg-teal-600 h-32 p-6 text-white rounded-b-3xl">
+                                <div class="flex justify-between items-center mt-4">
+                                    <div>
+                                        <div class="text-xs opacity-80">Good Morning,</div>
+                                        <div class="font-bold text-xl">Buddy is Active</div>
+                                    </div>
+                                    <div class="h-10 w-10 bg-white/20 rounded-full flex items-center justify-center">
+                                        <i data-lucide="dog" class="h-6 w-6"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="p-4 space-y-4 -mt-8">
+                                <div class="bg-white p-4 rounded-xl shadow-lg flex items-center justify-between">
+                                    <div class="flex items-center space-x-3">
+                                        <div class="bg-green-100 p-2 rounded-lg">
+                                            <i data-lucide="heart-pulse" class="h-5 w-5 text-green-600"></i>
+                                        </div>
+                                        <div>
+                                            <div class="text-xs text-gray-500">Heart Rate</div>
+                                            <div class="font-bold text-slate-800">78 BPM</div>
+                                        </div>
+                                    </div>
+                                    <div class="text-xs text-green-600 bg-green-50 px-2 py-1 rounded">Normal</div>
+                                </div>
+
+                                <div class="bg-slate-800 p-0 rounded-xl shadow-lg overflow-hidden h-40 relative group">
+                                    <div class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/10 transition">
+                                        <i data-lucide="play-circle" class="h-10 w-10 text-white opacity-80"></i>
+                                    </div>
+                                    <div class="absolute bottom-2 left-3 text-white text-xs font-bold">Living Room Cam</div>
+                                    <div class="absolute top-2 right-3 flex items-center space-x-1">
+                                        <div class="h-2 w-2 bg-red-500 rounded-full animate-pulse"></div>
+                                        <span class="text-xs text-white">LIVE</span>
+                                    </div>
+                                </div>
+
+                                <div class="grid grid-cols-2 gap-3">
+                                    <div class="bg-white p-3 rounded-xl shadow border border-slate-100 text-center">
+                                        <i data-lucide="lock" class="h-6 w-6 mx-auto text-indigo-500 mb-2"></i>
+                                        <div class="text-xs font-bold text-slate-700">Lock Crate</div>
+                                    </div>
+                                    <div class="bg-white p-3 rounded-xl shadow border border-slate-100 text-center">
+                                        <i data-lucide="pill" class="h-6 w-6 mx-auto text-pink-500 mb-2"></i>
+                                        <div class="text-xs font-bold text-slate-700">Dispense Meds</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="roadmap" class="section">
-        <h2>Roadmap</h2>
-        <ol>
-            <li><strong>Phase 1:</strong> Prototype development of collar, camera, crate.</li>
-            <li><strong>Phase 2:</strong> AI model training for health/behavior analytics.</li>
-            <li><strong>Phase 3:</strong> Mobile app integration + ecosystem sync.</li>
-            <li><strong>Phase 4:</strong> Pilot programs with early adopters.</li>
-            <li><strong>Phase 5:</strong> Certification & manufacturing.</li>
-            <li><strong>Launch:</strong> Full commercial rollout.</li>
-        </ol>
+    <!-- Rewards / Pledge Section -->
+    <section id="rewards" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-900">Support the Project</h2>
+                <p class="mt-4 text-slate-600 max-w-2xl mx-auto">Choose a reward level to bring PawGuard 360 to life. All tiers include a 6-month free subscription to the premium app features.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Tier 1 -->
+                <div class="border border-slate-200 rounded-2xl p-6 hover:border-teal-500 hover:shadow-xl transition relative bg-white">
+                    <h3 class="text-lg font-bold text-slate-900">Essentials Pack</h3>
+                    <div class="mt-4 flex items-baseline text-slate-900">
+                        <span class="text-4xl font-extrabold tracking-tight">$149</span>
+                        <span class="ml-1 text-xl font-semibold text-slate-500 strike-through line-through">$249</span>
+                    </div>
+                    <p class="mt-4 text-slate-500 text-sm">Get the Guardian GPS Collar and 1 year of app subscription. Perfect for outdoor cats and dogs.</p>
+                    
+                    <ul class="mt-6 space-y-4">
+                        <li class="flex items-start">
+                            <i data-lucide="check" class="flex-shrink-0 h-5 w-5 text-teal-500"></i>
+                            <span class="ml-3 text-sm text-slate-600">Guardian GPS Collar</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="check" class="flex-shrink-0 h-5 w-5 text-teal-500"></i>
+                            <span class="ml-3 text-sm text-slate-600">1 Year App Access</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="check" class="flex-shrink-0 h-5 w-5 text-teal-500"></i>
+                            <span class="ml-3 text-sm text-slate-600">Beta Tester Community Access</span>
+                        </li>
+                    </ul>
+                    <div class="mt-8">
+                        <button class="w-full bg-slate-800 border border-transparent rounded-lg py-3 px-4 text-sm font-medium text-white hover:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition">Select Reward</button>
+                        <p class="mt-2 text-xs text-center text-slate-400">Estimated Delivery: Dec 2025</p>
+                    </div>
+                </div>
+
+                <!-- Tier 2 (Featured) -->
+                <div class="border-2 border-teal-500 rounded-2xl p-6 shadow-2xl relative bg-white transform md:-translate-y-4">
+                    <div class="absolute top-0 right-0 -mt-3 -mr-3 px-3 py-1 bg-teal-500 text-white text-xs font-bold uppercase tracking-wide rounded-full shadow-md">Most Popular</div>
+                    <h3 class="text-lg font-bold text-slate-900">Early Bird Ecosystem</h3>
+                    <div class="mt-4 flex items-baseline text-slate-900">
+                        <span class="text-5xl font-extrabold tracking-tight">$399</span>
+                        <span class="ml-1 text-xl font-semibold text-slate-500 line-through">$699</span>
+                    </div>
+                    <p class="mt-4 text-slate-500 text-sm">The complete package. Get the Camera, Collar, and Crate at our lowest price ever.</p>
+                    
+                    <ul class="mt-6 space-y-4">
+                        <li class="flex items-start">
+                            <i data-lucide="check" class="flex-shrink-0 h-5 w-5 text-teal-500"></i>
+                            <span class="ml-3 text-sm text-slate-600 font-semibold">Smart Sentinel Camera</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="check" class="flex-shrink-0 h-5 w-5 text-teal-500"></i>
+                            <span class="ml-3 text-sm text-slate-600 font-semibold">Guardian GPS Collar</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="check" class="flex-shrink-0 h-5 w-5 text-teal-500"></i>
+                            <span class="ml-3 text-sm text-slate-600 font-semibold">Sanctuary Smart Crate</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="check" class="flex-shrink-0 h-5 w-5 text-teal-500"></i>
+                            <span class="ml-3 text-sm text-slate-600">Lifetime Premium App Access</span>
+                        </li>
+                    </ul>
+                    <div class="mt-8">
+                        <button class="w-full bg-teal-600 border border-transparent rounded-lg py-4 px-4 text-base font-bold text-white hover:bg-teal-700 focus:outline-none transition shadow-lg shadow-teal-500/30">Pledge $399</button>
+                        <p class="mt-2 text-xs text-center text-slate-400">124 left of 500</p>
+                    </div>
+                </div>
+
+                <!-- Tier 3 -->
+                <div class="border border-slate-200 rounded-2xl p-6 hover:border-teal-500 hover:shadow-xl transition relative bg-white">
+                    <h3 class="text-lg font-bold text-slate-900">Double Trouble Pack</h3>
+                    <div class="mt-4 flex items-baseline text-slate-900">
+                        <span class="text-4xl font-extrabold tracking-tight">$699</span>
+                        <span class="ml-1 text-xl font-semibold text-slate-500 line-through">$1200</span>
+                    </div>
+                    <p class="mt-4 text-slate-500 text-sm">Have two pets? Get double the gear and manage them both in one app profile.</p>
+                    
+                    <ul class="mt-6 space-y-4">
+                        <li class="flex items-start">
+                            <i data-lucide="check" class="flex-shrink-0 h-5 w-5 text-teal-500"></i>
+                            <span class="ml-3 text-sm text-slate-600">2x All Hardware (Cam, Collar, Crate)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="check" class="flex-shrink-0 h-5 w-5 text-teal-500"></i>
+                            <span class="ml-3 text-sm text-slate-600">Custom Engraved Tags</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="check" class="flex-shrink-0 h-5 w-5 text-teal-500"></i>
+                            <span class="ml-3 text-sm text-slate-600">Developer API Access</span>
+                        </li>
+                    </ul>
+                    <div class="mt-8">
+                        <button class="w-full bg-slate-800 border border-transparent rounded-lg py-3 px-4 text-sm font-medium text-white hover:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 transition">Select Reward</button>
+                        <p class="mt-2 text-xs text-center text-slate-400">Estimated Delivery: Jan 2026</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="impact" class="section alt">
-        <h2>Impact & Market Opportunity</h2>
-        <p>
-            The global pet tech market is rapidly growing, driven by increased pet ownership and demand for smart health monitoring. 
-            Aura delivers value for pet owners, veterinarians, working professionals, and frequent travelers—offering peace of mind 
-            and reducing emergency vet events with predictive care.
-        </p>
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 bg-slate-50">
+        <div class="max-w-3xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-slate-900 mb-12">Frequently Asked Questions</h2>
+            
+            <div class="space-y-4">
+                <details class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 group">
+                    <summary class="flex justify-between items-center cursor-pointer font-medium text-slate-900">
+                        Does the subscription cover cellular data for the collar?
+                        <span class="transition group-open:rotate-180">
+                            <i data-lucide="chevron-down" class="h-5 w-5 text-slate-500"></i>
+                        </span>
+                    </summary>
+                    <p class="mt-4 text-slate-600 text-sm leading-relaxed">
+                        Yes! The single monthly subscription covers the LTE cellular data required for GPS tracking, as well as cloud storage for the camera and health data analysis. No hidden carrier fees.
+                    </p>
+                </details>
+
+                <details class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 group">
+                    <summary class="flex justify-between items-center cursor-pointer font-medium text-slate-900">
+                        Is the medication dispenser compatible with liquid meds?
+                        <span class="transition group-open:rotate-180">
+                            <i data-lucide="chevron-down" class="h-5 w-5 text-slate-500"></i>
+                        </span>
+                    </summary>
+                    <p class="mt-4 text-slate-600 text-sm leading-relaxed">
+                        Currently, the Sanctuary Crate dispenser is designed for dry pills and treats. We are developing a liquid attachment module as a stretch goal for this campaign!
+                    </p>
+                </details>
+
+                <details class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 group">
+                    <summary class="flex justify-between items-center cursor-pointer font-medium text-slate-900">
+                        What happens if the power goes out?
+                        <span class="transition group-open:rotate-180">
+                            <i data-lucide="chevron-down" class="h-5 w-5 text-slate-500"></i>
+                        </span>
+                    </summary>
+                    <p class="mt-4 text-slate-600 text-sm leading-relaxed">
+                        The Smart Crate and Camera have built-in battery backups that last up to 12 hours. The Collar has a 14-day battery life. All devices will sync data locally and upload it once connection is restored.
+                    </p>
+                </details>
+            </div>
+        </div>
     </section>
 
-    <section id="team" class="section">
-        <h2>Our Team</h2>
-        <p>
-            Our team brings experience across hardware development, embedded systems, AI/ML, software engineering, and pet behavior 
-            psychology. We are committed to elevating global standards for pet safety and smart care.
-        </p>
-    </section>
-
-    <footer class="footer">
-        <p>© 2025 Aura Ecosystem / FurryWatch. All Rights Reserved.</p>
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-300 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-8">
+            <div class="col-span-1 md:col-span-2">
+                <div class="flex items-center space-x-2 mb-4">
+                    <i data-lucide="paw-print" class="h-6 w-6 text-teal-500 fill-current"></i>
+                    <span class="font-bold text-xl text-white">PawGuard 360</span>
+                </div>
+                <p class="text-sm text-slate-400 max-w-xs">
+                    Reinventing pet care through technology. Join us in creating a safer, happier world for our furry friends.
+                </p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4">Product</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-teal-400 transition">Features</a></li>
+                    <li><a href="#" class="hover:text-teal-400 transition">Tech Specs</a></li>
+                    <li><a href="#" class="hover:text-teal-400 transition">Subscription</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4">Support</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-teal-400 transition">Help Center</a></li>
+                    <li><a href="#" class="hover:text-teal-400 transition">Contact Us</a></li>
+                    <li><a href="#" class="hover:text-teal-400 transition">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 mt-12 pt-8 border-t border-slate-800 text-center text-xs text-slate-500">
+            &copy; 2025 PawGuard Inc. All rights reserved. Concept Design.
+        </div>
     </footer>
+
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // Simple smooth scroll (already native to HTML/CSS mostly, but ensuring button works)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
