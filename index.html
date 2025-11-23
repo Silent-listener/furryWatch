@@ -1,247 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Aura Ecosystem — IP Ontario Grant</title>
-  <meta name="description" content="Aura (FurryWatch) — a modular pet safety and monitoring ecosystem. Grant-ready single-page site describing invention, IP, roadmap, and grant use." />
-  <style>
-    :root{
-      --bg:#0f1724;
-      --card:#0b1320;
-      --accent:#1e90ff;
-      --muted:#98a0b3;
-      --glass: rgba(255,255,255,0.03);
-      --radius:14px;
-      --maxw:1100px;
-      color-scheme: dark;
-    }
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;color:#e6eef8;background: linear-gradient(180deg,#071028 0%, #071723 60%);-webkit-font-smoothing:antialiased}
-    .container{max-width:var(--maxw);margin:40px auto;padding:28px}
-
-    header.hero{display:flex;gap:28px;align-items:center;padding:36px;background:linear-gradient(135deg, rgba(30,144,255,0.12), rgba(4,120,87,0.05));border-radius:20px}
-    .hero-left{flex:1}
-    .kicker{display:inline-block;padding:6px 10px;background:var(--glass);border-radius:999px;color:var(--muted);font-size:13px}
-    h1{margin:12px 0 8px;font-size:32px;line-height:1.05;color:#fff}
-    p.lead{margin:0;color:var(--muted);font-size:15px}
-
-    .hero-right{width:380px;display:flex;justify-content:center}
-    .device-mock{width:280px;height:200px;border-radius:16px;background:linear-gradient(180deg,#07192a,#042033);box-shadow:0 10px 30px rgba(2,6,23,0.6);display:flex;align-items:center;justify-content:center;color:#9fd8ff}
-
-    nav.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:22px}
-    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px}
-    .card h3{margin:0 0 8px;color:#cfe9ff}
-    .card p{margin:0;color:var(--muted);font-size:14px}
-
-    main{margin-top:28px}
-    section{background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));padding:22px;border-radius:12px;margin-bottom:18px}
-    section h2{margin:0 0 12px;color:#cfe9ff}
-    section p{margin:0;color:var(--muted);line-height:1.5}
-
-    .grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
-    .feature{padding:14px;border-radius:10px;background:rgba(255,255,255,0.01)}
-    .feature h4{margin:0 0 8px;color:#eaf6ff}
-    .feature p{margin:0;color:var(--muted);font-size:14px}
-
-    .exec{background:linear-gradient(90deg, rgba(30,144,255,0.06), rgba(4,120,87,0.03));padding:18px;border-radius:12px}
-    .muted{color:var(--muted)}
-
-    .two-col{display:grid;grid-template-columns:1fr 320px;gap:18px}
-    .device-svg{width:100%;height:auto;border-radius:10px;overflow:hidden;background:linear-gradient(180deg,#021927, #042033);padding:12px}
-
-    footer{margin:28px 0 80px;text-align:center;color:var(--muted)}
-
-    .btn{display:inline-block;padding:10px 16px;border-radius:12px;background:linear-gradient(90deg,var(--accent),#07b39b);color:#021722;text-decoration:none;font-weight:600}
-
-    @media (max-width:900px){.two-col{grid-template-columns:1fr}
-      .hero-right{display:none}
-      nav.cards{grid-template-columns:1fr}
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aura Ecosystem / FurryWatch</title>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="container">
     <header class="hero">
-      <div class="hero-left">
-        <div class="kicker">Aura (FurryWatch)</div>
-        <h1>Modular Pet Safety & Monitoring Ecosystem — Smart collar • Smart crate • Unified app</h1>
-        <p class="lead">AI-driven, hybrid-connectivity platform offering continuous health monitoring, environmental automation, GPS location, and secure local data ownership — delivered under a single subscription model.</p>
-        <div style="margin-top:16px">
-          <a class="btn" href="#executive-summary">Grant-ready Executive Summary</a>
-          <a class="btn" style="margin-left:10px;background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)" href="#contact">Contact</a>
+        <div class="hero-content">
+            <h1>Aura Ecosystem / FurryWatch</h1>
+            <p class="subtitle">A Modular Pet Safety & Monitoring Ecosystem</p>
+            <p class="tagline">Wearables • Smart Crates • AI Health Monitoring • Unified App</p>
         </div>
-      </div>
-
-      <div class="hero-right">
-        <div class="device-mock">
-          <!-- simple SVG mockup -->
-          <svg width="160" height="120" viewBox="0 0 160 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="2" y="6" width="156" height="108" rx="12" fill="#042733" stroke="#79c9ff" stroke-opacity="0.18"/>
-            <circle cx="40" cy="53" r="18" fill="#092e3f" stroke="#8fe0ff" stroke-opacity="0.14"/>
-            <rect x="72" y="30" width="70" height="60" rx="8" fill="#062231" stroke="#9fd8ff" stroke-opacity="0.08"/>
-            <path d="M18 92c10-6 30-6 44 0" stroke="#7fd0ff" stroke-opacity="0.08" stroke-width="2" stroke-linecap="round"/>
-          </svg>
-        </div>
-      </div>
     </header>
 
-    <main>
-      <section id="executive-summary" class="exec">
+    <section id="executive-summary" class="section">
         <h2>Executive Summary</h2>
-        <p class="muted">Aura (branded FurryWatch) is a modular pet safety and monitoring ecosystem combining a GPS-enabled e-collar, a networked smart crate, and integrated cameras — all managed through a single mobile application. The invention’s primary objective is to provide pet owners with continuous, actionable health and safety information and enable remote intervention when required. Key innovations include AI-powered behavioral and vital-sign analysis, hybrid Wi‑Fi/cellular connectivity, local mobile-device data storage for stronger data ownership, and a single subscription that consolidates services.</p>
-      </section>
+        <p>
+            The Aura Ecosystem (FurryWatch) is a fully integrated pet safety, health, and behavior monitoring system. 
+            It unifies a smart e-collar, intelligent crate, and AI-powered camera into one ecosystem controlled by a 
+            single mobile app. Designed for reliability, predictive care, and real-time remote interaction, Aura delivers 
+            continuous monitoring through hybrid Wi-Fi/cellular connectivity and a single subscription model. 
+            Aura solves the fragmentation and inefficiencies of current pet tech by offering a cohesive, automated, and 
+            intelligent pet care platform.
+        </p>
+    </section>
 
-      <section>
+    <section id="problems" class="section alt">
         <h2>Problems We Solve</h2>
-        <div class="grid-3">
-          <div class="feature">
-            <h4>Lack of Unified Ecosystem</h4>
-            <p class="muted">Current products are fragmented across vendors and apps. Aura unifies tracking, monitoring, automation, and communication under one platform and subscription.</p>
-          </div>
-          <div class="feature">
-            <h4>Connectivity Reliability</h4>
-            <p class="muted">Devices use hybrid connectivity (Wi‑Fi + cellular) with backup power to ensure continuous operation during outages.</p>
-          </div>
-          <div class="feature">
-            <h4>Security & Data Ownership</h4>
-            <p class="muted">Local mobile-device storage for audio/video plus hardened endpoints reduce cloud exposure and improve user control over sensitive data.</p>
-          </div>
-          <div class="feature">
-            <h4>Limited Intelligence</h4>
-            <p class="muted">AI-driven anomaly detection identifies health or behavioral issues earlier than manual monitoring or simple threshold alerts.</p>
-          </div>
-          <div class="feature">
-            <h4>Poor Automation & Remote Intervention</h4>
-            <p class="muted">Coordinated device actions allow automatic crate climate adjustment, remote medication dosing triggers, and two-way communication in emergencies.</p>
-          </div>
-          <div class="feature">
-            <h4>Cost & Complexity</h4>
-            <p class="muted">Single subscription model replaces multiple bills and reduces user friction for onboarding and management.</p>
-          </div>
-        </div>
-      </section>
+        <ul>
+            <li><strong>Fragmented Devices:</strong> Current GPS trackers, cameras, feeders, and health monitors each require separate apps and subscriptions.</li>
+            <li><strong>Poor Connectivity:</strong> Most devices rely solely on Wi-Fi and fail when the connection drops.</li>
+            <li><strong>Lack of Intelligence:</strong> Existing systems rarely include AI for behavioral or health anomaly detection.</li>
+            <li><strong>No Automation:</strong> Current solutions cannot take automated environmental action.</li>
+            <li><strong>Limited Remote Control:</strong> Owners cannot intervene in real time when away.</li>
+        </ul>
+    </section>
 
-      <section>
+    <section id="solution" class="section">
+        <h2>Our Solution</h2>
+        <p>
+            The Aura Ecosystem connects three smart devices—an AI camera, GPS/health monitoring e-collar, and intelligent crate—
+            through a unified app with continuous data sharing. The system uses AI for predictive alerts, supports automated crate adjustments,
+            enables real-time interventions, and prevents downtime with hybrid connectivity.
+        </p>
+    </section>
+
+    <section id="features" class="section alt">
         <h2>Key Features</h2>
-        <div class="two-col">
-          <div>
-            <ul class="muted" style="margin:0 0 12px 18px;line-height:1.6">
-              <li><strong>GPS-enabled e-collar:</strong> Real-time location, activity, and vitals sensing (heartbeat, temperature).</li>
-              <li><strong>Intelligent crate:</strong> Automated climate control, medication dispensers, and environmental sensors (temperature, humidity, air quality).</li>
-              <li><strong>Smart cameras:</strong> High-resolution video with on-device pre-processing for privacy-preserving alerts.</li>
-              <li><strong>Unified app:</strong> Single interface for monitoring, alerts, telepresence, and device coordination.</li>
-              <li><strong>AI & analytics:</strong> Behavioural models that detect irregularities, stress, illness patterns, and predict risk before escalation.</li>
-              <li><strong>Hybrid connectivity:</strong> Wi‑Fi + cellular failover and local buffering to avoid data loss during outages.</li>
-              <li><strong>Security-first design:</strong> Encrypted channels, device attestation, and local-first data storage options.</li>
-            </ul>
-          </div>
-          <aside>
-            <div class="device-svg">
-              <!-- Simple diagram placeholders -->
-              <svg viewBox="0 0 600 360" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                  <linearGradient id="g" x1="0" x2="1">
-                    <stop offset="0" stop-color="#38bdf8" stop-opacity="0.9"/>
-                    <stop offset="1" stop-color="#06b6d4" stop-opacity="0.9"/>
-                  </linearGradient>
-                </defs>
-                <rect x="10" y="10" width="580" height="340" rx="14" fill="#031827" />
-                <g transform="translate(40,40)">
-                  <rect x="0" y="0" width="120" height="80" rx="10" fill="#072635" stroke="url(#g)" stroke-opacity="0.2"/>
-                  <text x="12" y="48" fill="#9fd8ff" font-size="12">E‑Collar (GPS, Vitals)</text>
-
-                  <rect x="160" y="0" width="160" height="80" rx="10" fill="#072635" stroke="url(#g)" stroke-opacity="0.2"/>
-                  <text x="176" y="26" fill="#cfe9ff" font-size="12">Smart Crate</text>
-                  <text x="176" y="44" fill="#9fd8ff" font-size="11">Climate, dispenser, sensors</text>
-
-                  <rect x="0" y="120" width="120" height="80" rx="10" fill="#072635" stroke="url(#g)" stroke-opacity="0.2"/>
-                  <text x="12" y="156" fill="#9fd8ff" font-size="12">Camera</text>
-
-                  <rect x="220" y="120" width="160" height="80" rx="10" fill="#072635" stroke="url(#g)" stroke-opacity="0.2"/>
-                  <text x="236" y="156" fill="#cfe9ff" font-size="12">Mobile App</text>
-
-                  <path d="M120 40 L160 40 L200 40" stroke="#7fd0ff" stroke-opacity="0.18" stroke-width="3" fill="none"/>
-                  <path d="M120 160 L200 160" stroke="#7fd0ff" stroke-opacity="0.18" stroke-width="3"/>
-
-                  <circle cx="420" cy="60" r="36" fill="#022a35" stroke="#8fe0ff" stroke-opacity="0.12"/>
-                  <text x="396" y="67" fill="#9fd8ff" font-size="11">Cloud (optional)</text>
-                </g>
-              </svg>
-            </div>
-          </aside>
+        <div class="features-grid">
+            <div class="feature">AI Health & Behavior Monitoring</div>
+            <div class="feature">GPS Tracking & Geofencing</div>
+            <div class="feature">Smart Crate Environmental Control</div>
+            <div class="feature">Two-Way Audio & Camera Monitoring</div>
+            <div class="feature">Medication & Feeding Management</div>
+            <div class="feature">Single-App Unified Control</div>
+            <div class="feature">Hybrid Wi-Fi + Cellular Connectivity</div>
+            <div class="feature">Local Mobile Storage for Privacy</div>
         </div>
-      </section>
+    </section>
 
-      <section>
-        <h2>Competitive Advantages & Novelty (IP Highlights)</h2>
-        <p class="muted">The Aura system includes several inventive features that support patentable claims and strong IP positioning:</p>
-        <ul class="muted" style="margin-top:12px;line-height:1.6">
-          <li><strong>Integrated ecosystem behavior:</strong> Coordinated device-to-device responses (e.g., crate climate adjusts automatically when collar vitals indicate distress).</li>
-          <li><strong>AI-powered predictive alerts:</strong> Proprietary models trained to detect subtle behavioural and physiological anomalies before acute events.</li>
-          <li><strong>Local mobile-device storage:</strong> Audio/video stored on the user’s device by default to improve privacy and data ownership.</li>
-          <li><strong>Hybrid connectivity with intelligent buffering:</strong> Seamless handover between Wi‑Fi and cellular with on-device buffering to prevent data gaps.</li>
-          <li><strong>Single subscription consolidation:</strong> A novel service model bundling hardware, analytics, and communications under one subscription for cost-efficiency.</li>
-          <li><strong>Modular hardware architecture:</strong> Scalable modules (collar, crate, camera, gateway) that can be added or removed without reconfiguration of the core intelligence.</li>
+    <section id="advantages" class="section">
+        <h2>Competitive Advantages & IP Highlights</h2>
+        <ul>
+            <li><strong>True Integration:</strong> Wearables, cameras, and environmental hardware communicate in real time.</li>
+            <li><strong>AI-Driven Predictive Monitoring:</strong> Detects abnormalities earlier than traditional devices.</li>
+            <li><strong>Local Mobile Storage:</strong> Ensures security, speed, and user ownership of audio/video data.</li>
+            <li><strong>Single Subscription:</strong> Covers all devices—no extra fees.</li>
+            <li><strong>Modular Ecosystem:</strong> Easily expandable with future devices and features.</li>
         </ul>
-      </section>
+    </section>
 
-      <section>
+    <section id="technical" class="section alt">
         <h2>Technical Overview</h2>
-        <p class="muted">Below is a concise technical breakdown of the primary system components and their roles.</p>
-        <div class="grid-3" style="margin-top:12px">
-          <div class="feature"><h4>Wearable (E‑Collar)</h4><p class="muted">GPS, accelerometer, PPG/ECG sensor for heart rate, temperature sensor, low-power MCU, secure element for key storage, cellular/Wi‑Fi module.</p></div>
-          <div class="feature"><h4>Smart Crate</h4><p class="muted">Environmental sensors, automated HVAC control, medication dispenser actuator, edge compute node for local automation and secure communication to the app.</p></div>
-          <div class="feature"><h4>Camera & Edge Vision</h4><p class="muted">On-device pre-processing to extract events (barking, seizure patterns) and transmit anonymized alerts; optional cloud for advanced analytics.</p></div>
-          <div class="feature"><h4>Mobile App</h4><p class="muted">Unified control panel, local encrypted media storage, telemetry visualization, remote intervention controls (speak, dispense, adjust crate).</p></div>
-          <div class="feature"><h4>Connectivity & Security</h4><p class="muted">Hybrid Wi‑Fi/cellular, TLS+mutual auth, device attestation, and user-controlled data retention policies.</p></div>
-          <div class="feature"><h4>AI & Analytics</h4><p class="muted">On-device inference for low-latency alerts and optional cloud training pipelines for model refinement under strict privacy controls.</p></div>
-        </div>
-      </section>
-
-      <section>
-        <h2>Roadmap & Use of IP Ontario Grant</h2>
-        <p class="muted">The requested grant will accelerate IP strategy development, prototyping, and commercialization activities. Primary uses include:</p>
-        <ul class="muted" style="line-height:1.6;margin-top:10px">
-          <li><strong>IP Strategy & Prosecution:</strong> Prior art searches, patent drafting, and filing for core claims (AI analytics, device coordination, hybrid connectivity behaviors).</li>
-          <li><strong>Hardware Prototyping:</strong> Build and test production-intent prototypes for collar and crate modules.</li>
-          <li><strong>Regulatory & Security:</strong> Conduct security audits, CE/CSA/other compliance testing as required for hardware deployment.</li>
-          <li><strong>AI Model Development:</strong> Data collection, labeling, and model training for predictive behaviour and vitals analytics.</li>
-          <li><strong>Commercialization Prep:</strong> Pilot deployments, UX testing, and go-to-market preparations.</li>
+        <p>The system consists of three interconnected hardware components:</p>
+        <ul>
+            <li><strong>Smart E-Collar:</strong> Tracks vitals (heart rate, temperature), GPS location, stress indicators, and movement patterns.</li>
+            <li><strong>AI Camera Unit:</strong> Performs real-time behavior classification and security monitoring.</li>
+            <li><strong>Smart Crate:</strong> Automatically adjusts temperature, humidity, and lighting based on real-time pet data.</li>
         </ul>
-      </section>
+        <p>All devices sync with the Aura mobile app and cloud services through both Wi-Fi and cellular fallback.</p>
+    </section>
 
-      <section>
+    <section id="roadmap" class="section">
+        <h2>Roadmap</h2>
+        <ol>
+            <li><strong>Phase 1:</strong> Prototype development of collar, camera, crate.</li>
+            <li><strong>Phase 2:</strong> AI model training for health/behavior analytics.</li>
+            <li><strong>Phase 3:</strong> Mobile app integration + ecosystem sync.</li>
+            <li><strong>Phase 4:</strong> Pilot programs with early adopters.</li>
+            <li><strong>Phase 5:</strong> Certification & manufacturing.</li>
+            <li><strong>Launch:</strong> Full commercial rollout.</li>
+        </ol>
+    </section>
+
+    <section id="impact" class="section alt">
         <h2>Impact & Market Opportunity</h2>
-        <p class="muted">Aura targets a large and growing market of companion-animal owners seeking premium safety and health services. By reducing emergency incidents, enabling early intervention, and simplifying ownership, Aura improves animal welfare while creating subscription-based recurring revenue and opportunities for partnerships with veterinary services and insurers.</p>
-      </section>
+        <p>
+            The global pet tech market is rapidly growing, driven by increased pet ownership and demand for smart health monitoring. 
+            Aura delivers value for pet owners, veterinarians, working professionals, and frequent travelers—offering peace of mind 
+            and reducing emergency vet events with predictive care.
+        </p>
+    </section>
 
-      <section>
-        <h2>Team (Core)</h2>
-        <div class="grid-3" style="margin-top:12px">
-          <div class="feature"><h4>Founder / CEO</h4><p class="muted">Product & business lead with experience in consumer IoT and hardware commercialization.</p></div>
-          <div class="feature"><h4>CTO</h4><p class="muted">Embedded systems and connectivity expert leading hardware design and security architecture.</p></div>
-          <div class="feature"><h4>Head of AI & Data</h4><p class="muted">Responsible for model development, data pipelines, and analytics for health and behavior detection.</p></div>
-        </div>
-      </section>
+    <section id="team" class="section">
+        <h2>Our Team</h2>
+        <p>
+            Our team brings experience across hardware development, embedded systems, AI/ML, software engineering, and pet behavior 
+            psychology. We are committed to elevating global standards for pet safety and smart care.
+        </p>
+    </section>
 
-      <section>
-        <h2>Roadmap Snapshot (12–18 months)</h2>
-        <p class="muted">Prototype -> Pilot -> Certification -> Scale. A phased timeline will prioritize IP filings and prototype validation within the first 6–9 months, followed by pilots and regulatory testing.</p>
-      </section>
-
-      <section>
-        <h2>Contact & Next Steps</h2>
-        <p class="muted">We welcome collaboration with IP specialists, pilot partners, and funding evaluators. For grant materials, supporting documents, or to schedule a briefing, contact us at <strong>contact@yourcompany.com</strong> (placeholder) or use the contact link below.</p>
-        <div style="margin-top:12px"><a class="btn" id="contact" href="mailto:contact@yourcompany.com">Request Grant Briefing</a></div>
-      </section>
-
-    </main>
-
-    <footer>
-      <div>&copy; 2025 Aura / FurryWatch. All rights reserved.</div>
+    <footer class="footer">
+        <p>© 2025 Aura Ecosystem / FurryWatch. All Rights Reserved.</p>
     </footer>
-
-  </div>
 </body>
 </html>
