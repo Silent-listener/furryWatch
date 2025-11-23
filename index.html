@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PawGuard 360 - The Ultimate Pet Care Ecosystem</title>
+    <title>Furry Watch - The Ultimate Pet Care Ecosystem</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/umd/lucide.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; }
         .clip-path-slant {
@@ -19,6 +19,21 @@
             0%, 100% { opacity: 1; }
             50% { opacity: .7; }
         }
+        /* Apple-style smooth reveal */
+        .reveal-text {
+            background: linear-gradient(to right, #0f172a 20%, #64748b 40%, #0f172a 60%, #0f172a 80%);
+            background-size: 200% auto;
+            color: #000;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shine 5s linear infinite;
+        }
+        @keyframes shine {
+            to {
+                background-position: 200% center;
+            }
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800">
@@ -29,7 +44,7 @@
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center space-x-2">
                     <i data-lucide="paw-print" class="h-8 w-8 text-teal-600 fill-current"></i>
-                    <span class="font-bold text-xl tracking-tight text-slate-900">PawGuard 360</span>
+                    <span class="font-bold text-xl tracking-tight text-slate-900">Furry Watch</span>
                 </div>
                 <div class="hidden md:flex space-x-8">
                     <a href="#features" class="text-slate-600 hover:text-teal-600 transition">Features</a>
@@ -137,20 +152,36 @@
         </div>
     </div>
 
-    <!-- Problem / Solution -->
-    <section class="py-20 bg-white">
-        <div class="max-w-4xl mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold text-slate-900 mb-6">The Problem: Fragmented Care</h2>
-            <p class="text-lg text-slate-600 mb-12">
-                Pet owners currently juggle 3-4 different apps: one for the camera, one for the GPS tracker, and another for health records. It's expensive, confusing, and disconnects you from your pet's actual needs.
-            </p>
-            
-            <div class="relative p-8 bg-slate-50 rounded-3xl border border-slate-200">
-                <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-teal-600 text-white px-4 py-1 rounded-full text-sm font-bold uppercase tracking-wide">The Solution</div>
-                <h3 class="text-2xl font-bold text-slate-900 mt-4 mb-4">PawGuard 360 Ecosystem</h3>
-                <p class="text-slate-600">
-                    We integrated everything. The intelligent crate talks to the collar. The camera syncs with health data. All controlled by one intuitive app with a single affordable subscription.
-                </p>
+    <!-- Mission & Vision (Apple Style) -->
+    <section class="py-32 bg-white border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col items-center text-center space-y-24">
+                
+                <!-- Mission -->
+                <div class="max-w-4xl">
+                    <span class="text-teal-600 font-bold tracking-widest uppercase text-xs mb-6 block">Our Mission</span>
+                    <h2 class="text-5xl md:text-7xl font-extrabold text-slate-900 tracking-tighter mb-8 leading-tight">
+                        Safety without<br>boundaries.
+                    </h2>
+                    <p class="text-2xl md:text-3xl font-light text-slate-500 leading-normal max-w-3xl mx-auto">
+                        To erase the distance between you and the life you love. We build technology that empowers connection and transforms anxiety into absolute assurance.
+                    </p>
+                </div>
+
+                <!-- Minimalist Divider -->
+                <div class="h-16 w-px bg-gradient-to-b from-slate-200 to-transparent"></div>
+
+                <!-- Vision -->
+                <div class="max-w-4xl">
+                    <span class="text-teal-600 font-bold tracking-widest uppercase text-xs mb-6 block">Our Vision</span>
+                    <h2 class="text-5xl md:text-7xl font-extrabold text-slate-900 tracking-tighter mb-8 leading-tight">
+                        Care, redefined.
+                    </h2>
+                    <p class="text-2xl md:text-3xl font-light text-slate-500 leading-normal max-w-3xl mx-auto">
+                        A world where every pet is understood, protected, and always just a heartbeat away. Where "alone" never means "unsafe."
+                    </p>
+                </div>
+
             </div>
         </div>
     </section>
@@ -326,7 +357,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-3xl font-bold text-slate-900">Support the Project</h2>
-                <p class="mt-4 text-slate-600 max-w-2xl mx-auto">Choose a reward level to bring PawGuard 360 to life. All tiers include a 6-month free subscription to the premium app features.</p>
+                <p class="mt-4 text-slate-600 max-w-2xl mx-auto">Choose a reward level to bring Furry Watch to life. All tiers include a 6-month free subscription to the premium app features.</p>
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
@@ -476,7 +507,7 @@
             <div class="col-span-1 md:col-span-2">
                 <div class="flex items-center space-x-2 mb-4">
                     <i data-lucide="paw-print" class="h-6 w-6 text-teal-500 fill-current"></i>
-                    <span class="font-bold text-xl text-white">PawGuard 360</span>
+                    <span class="font-bold text-xl text-white">Furry Watch</span>
                 </div>
                 <p class="text-sm text-slate-400 max-w-xs">
                     Reinventing pet care through technology. Join us in creating a safer, happier world for our furry friends.
