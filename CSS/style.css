@@ -93,6 +93,12 @@ ul, ol {
     font-size: 0.9rem;
 }
 
+#dog-image {
+    background-image: url(../Images/dog-barking-home.jpg);
+    background-size: contain;
+}
+
+
 /* ==========================
    Responsive
 ========================== */
