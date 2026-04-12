@@ -8,6 +8,7 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
+            .text-blue { color: #2563eb !important; }
         body { font-family: 'Inter', sans-serif; }
         .clip-path-slant {
             clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
@@ -43,15 +44,15 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center space-x-2">
-                    <i data-lucide="paw-print" class="h-8 w-8 text-teal-600 fill-current"></i>
+                    <span class="font-bold tracking-tighter uppercase" style="color: #8f98b3;">FURRYWATCH</span>
                 </div>
                 <div class="hidden md:flex space-x-8">
-                    <a href="#features" class="text-slate-600 hover:text-teal-600 transition">Features</a>
-                    <a href="#app" class="text-slate-600 hover:text-teal-600 transition">The App</a>
-                    <!-- <a href="#rewards" class="text-slate-600 hover:text-teal-600 transition">Rewards</a> -->
-                    <a href="#faq" class="text-slate-600 hover:text-teal-600 transition">FAQ</a>
+                    <a href="#features" class="text-slate-600 hover:text-amber-500 transition">Features</a>
+                    <a href="#app" class="text-slate-600 hover:text-amber-500 transition">The App</a>
+                    <!-- <a href="#rewards" class="text-slate-600 hover:text-amber-500 transition">Rewards</a> -->
+                    <a href="#faq" class="text-slate-600 hover:text-amber-500 transition">FAQ</a>
                 </div>
-                <button onclick="document.getElementById('rewards').scrollIntoView({behavior: 'smooth'})" class="bg-teal-600 hover:bg-teal-700 text-white px-6 py-2 rounded-full font-medium transition shadow-lg shadow-teal-600/20">
+                <button onclick="document.getElementById('rewards').scrollIntoView({behavior: 'smooth'})" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full font-medium transition shadow-lg shadow-blue-600/20">
                     Back this Project
                 </button>
             </div>
@@ -61,10 +62,10 @@
     <!-- Hero Section -->
     <div class="relative bg-slate-900 text-white overflow-hidden pb-16 lg:pb-24">
         <div class="absolute inset-0">
-            <div class="absolute inset-0 bg-gradient-to-br from-teal-900/40 to-slate-900/90 mix-blend-multiply"></div>
+            <div class="absolute inset-0 bg-gradient-to-br from-amber-400/30 to-slate-900/90 mix-blend-multiply"></div>
             <!-- Abstract background shapes -->
-            <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-teal-500/10 blur-3xl"></div>
-            <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-indigo-500/10 blur-3xl"></div>
+            <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-amber-400/10 blur-3xl"></div>
+            <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-yellow-400/10 blur-3xl"></div>
         </div>
 
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 lg:pt-24">
@@ -72,16 +73,18 @@
                 
                 <!-- Hero Content -->
                 <div class="lg:col-span-7 space-y-8">
-                    <!-- <div class="inline-flex items-center px-3 py-1 rounded-full bg-teal-500/10 border border-teal-500/20 text-teal-400 text-sm font-medium">
-                        <span class="animate-pulse mr-2 h-2 w-2 rounded-full bg-teal-400"></span>
+                    <!-- <div class="inline-flex items-center px-3 py-1 rounded-full bg-amber-400/10 border border-amber-400/20 text-amber-500 text-sm font-medium">
+                        <span class="animate-pulse mr-2 h-2 w-2 rounded-full bg-amber-400"></span>
                         Coming soon on Kickstarter
                     </div> -->
                     <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                        AURA PetSphere™ <br>
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-emerald-400">Smart Unified Ecosystem.</span>
+                        AURA Ecosystem <br>
                     </h1>
+                    <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight">
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-400">Intelligent Pet Monitoring,<br> All in One Place</span>
+                    </h2>
                     <p class="text-lg text-slate-300 max-w-2xl">
-                        AI Camera. Smart E-Collar. Intelligent Crate. Connected via one app to monitor health, safety, and behavior. Complete pet care, simplified.
+                        <span class="text-white">Sentinel Camera, Guardian Collar, Sanctuary Crate.<br>Connected via one app to monitor health, safety, behavior and act(corrective measures)</span>
                     </p>
 
                     <!-- Funding Stats -->
@@ -104,7 +107,7 @@
                     </div> -->
 
                     <div class="flex flex-col sm:flex-row gap-4">
-                        <button onclick="document.getElementById('rewards').scrollIntoView({behavior: 'smooth'})" class="px-8 py-4 bg-teal-500 hover:bg-teal-600 text-white font-bold rounded-xl transition shadow-lg shadow-teal-500/25 flex items-center justify-center">
+                        <button onclick="document.getElementById('rewards').scrollIntoView({behavior: 'smooth'})" class="px-8 py-4 bg-amber-400 hover:bg-yellow-400 text-slate-900 font-bold rounded-xl transition shadow-lg shadow-amber-400/25 flex items-center justify-center">
                             Pre-order Now (coming soon)
                             <i data-lucide="arrow-right" class="ml-2 h-5 w-5"></i>
                         </button>
@@ -191,12 +194,12 @@
                 
                 <!-- Mission -->
                 <div class="max-w-4xl">
-                    <span class="text-teal-600 font-bold tracking-widest uppercase text-xs mb-6 block">Our Mission</span>
+                    <span class="text-blue font-bold tracking-widest uppercase text-2xl mb-6 block">Our Mission</span>
                     <h2 class="text-5xl md:text-7xl font-extrabold text-slate-900 tracking-tighter mb-8 leading-tight">
                         Safety without<br>boundaries.
                     </h2>
                     <p class="text-2xl md:text-3xl font-light text-slate-500 leading-normal max-w-3xl mx-auto">
-                        To erase the distance between you and the life you love. We build technology that empowers connection and transforms anxiety into absolute assurance.
+                        To provide boundless safety for the life you love through technology you can trust.
                     </p>
                 </div>
 
@@ -205,12 +208,12 @@
 
                 <!-- Vision -->
                 <div class="max-w-4xl">
-                    <span class="text-teal-600 font-bold tracking-widest uppercase text-xs mb-6 block">Our Vision</span>
+                    <span class="text-blue font-bold tracking-widest uppercase text-2xl mb-6 block">Our Vision</span>
                     <h2 class="text-5xl md:text-7xl font-extrabold text-slate-900 tracking-tighter mb-8 leading-tight">
                         Care, redefined.
                     </h2>
                     <p class="text-2xl md:text-3xl font-light text-slate-500 leading-normal max-w-3xl mx-auto">
-                        A world where every pet is understood, protected, and always just a heartbeat away. Where "alone" never means "unsafe."
+                        A world where "alone" never means "unsafe".
                     </p>
                 </div>
 
@@ -222,7 +225,7 @@
     <section id="features" class="py-20 bg-slate-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-teal-600 font-semibold tracking-wide uppercase text-sm mb-2">Hardware Features</h2>
+                <h2 class="text-blue font-semibold tracking-wide uppercase text-2xl mb-2">Hardware Features</h2>
                 <h3 class="text-3xl md:text-4xl font-bold text-slate-900">Three Devices. One Mind.</h3>
             </div>
 
@@ -249,9 +252,10 @@
                     <h4 class="text-xl font-bold mb-3">Guardian GPS Collar</h4>
                     <p class="text-slate-600 mb-4">Real-time location tracking combined with vital sign monitoring (Heart Rate, Temp).</p>
                     <ul class="space-y-2 text-sm text-slate-500">
-                        <li class="flex items-center"><i data-lucide="check" class="h-4 w-4 text-orange-500 mr-2"></i> Global LTE Tracking</li>
-                        <li class="flex items-center"><i data-lucide="check" class="h-4 w-4 text-orange-500 mr-2"></i> Activity & Sleep Analysis</li>
                         <li class="flex items-center"><i data-lucide="check" class="h-4 w-4 text-orange-500 mr-2"></i> Smart training</li>
+                        <li class="flex items-center"><i data-lucide="check" class="h-4 w-4 text-orange-500 mr-2"></i> Corrective Measures</li>
+                        <li class="flex items-center"><i data-lucide="check" class="h-4 w-4 text-orange-500 mr-2"></i> Activity & Sleep Analysis</li>
+                        <li class="flex items-center"><i data-lucide="check" class="h-4 w-4 text-orange-500 mr-2"></i> Global LTE Tracking</li>
                     </ul>
                 </div>
 
@@ -265,7 +269,7 @@
                     <ul class="space-y-2 text-sm text-slate-500">
                         <li class="flex items-center"><i data-lucide="check" class="h-4 w-4 text-indigo-500 mr-2"></i> Auto-locking Mechanism</li>
                         <li class="flex items-center"><i data-lucide="check" class="h-4 w-4 text-indigo-500 mr-2"></i> Treat & Food Dispenser</li>
-                        <li class="flex items-center"><i data-lucide="check" class="h-4 w-4 text-indigo-500 mr-2"></i> Climate Sensor</li>
+                        <li class="flex items-center"><i data-lucide="check" class="h-4 w-4 text-indigo-500 mr-2"></i> Climate Control</li>
                     </ul>
                 </div>
             </div>
