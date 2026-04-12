@@ -111,3 +111,53 @@ ul, ol {
         padding: 60px 7%;
     }
 }
+
+/* Orbiting group rotation */
+.orbit-rotate {
+    animation: orbit-group-rotate 8s linear infinite;
+}
+@keyframes orbit-group-rotate {
+    100% { transform: rotate(360deg); }
+}
+/* Each icon stays upright (counter-rotation) */
+.orbit-icon {
+    animation: orbit-icon-upright 8s linear infinite;
+}
+@keyframes orbit-icon-upright {
+    100% { transform: rotate(-360deg); }
+}
+/* Ensure phone mockup is above orbiting icons */
+.orbit-rotate { z-index: 10; }
+.central-phone { z-index: 20; }
+
+/* Orbiting ring spins clockwise */
+.animate-spin-slow {
+  animation: spin 20s linear infinite;
+}
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+/* Icons spin counter-clockwise to stay upright */
+.animate-reverse-spin {
+  animation: reverse-spin 20s linear infinite;
+}
+@keyframes reverse-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-360deg); }
+}
+/* PPT-style phone mockup utility */
+.phone-ppt-mockup {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 0.9rem;
+  border-width: 4px;
+  border-color: #1e293b;
+  background: #1e293b;
+  box-shadow: 0 8px 32px 0 rgba(0,0,0,0.18);
+  width: 80px;
+  height: 145px;
+  overflow: hidden;
+  z-index: 10;
+}
