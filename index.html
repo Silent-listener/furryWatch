@@ -36,12 +36,19 @@
             }
         }
         /* Rotating animation for orbiting icons */
-        @keyframes rotate-orbit {
+        @keyframes spin {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
-        .orbit-rotate {
-            animation: rotate-orbit 12s linear infinite;
+        @keyframes reverse-spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(-360deg); }
+        }
+        .animate-spin-slow {
+            animation: spin 20s linear infinite;
+        }
+        .animate-reverse-spin {
+            animation: reverse-spin 20s linear infinite;
         }
         /* Keep icons upright as they orbit */
         .orbit-icon {
@@ -147,42 +154,42 @@
                                 <div class="absolute inset-0 border-2 border-dashed border-blue-200 rounded-full" style="width:340px;height:340px;"></div>
                                 <!-- Orbiting Icons (stay upright) -->
                                 <div class="absolute top-[0%] left-[50%]" style="transform:translate(-50%,-50%);">
-                                    <div class="p-3 bg-white shadow-lg rounded-xl border border-blue-50 animate-reverse-spin">
+                                    <div class="p-3 bg-white/90 shadow-lg rounded-xl border border-blue-50 animate-reverse-spin">
                                         <img src="../furryWatch/Images/dog-dish-svgrepo-com.svg" alt="Dog bowl" class="w-8 h-7 object-contain" />
                                     </div>
                                 </div>
                                 <div class="absolute top-[15%] left-[85%]" style="transform:translate(-50%,-50%);">
-                                    <div class="p-3 bg-white shadow-lg rounded-xl border border-blue-50 animate-reverse-spin">
+                                    <div class="p-3 bg-white/90 shadow-lg rounded-xl border border-blue-50 animate-reverse-spin">
                                         <img src="../furryWatch/Images/webcam-3-svgrepo-com.svg" alt="Camera" class="w-14 h-8 object-contain" />
                                     </div>
                                 </div>
                                 <div class="absolute top-[50%] left-[100%]" style="transform:translate(-50%,-50%);">
-                                    <div class="p-3 bg-white shadow-lg rounded-xl border border-blue-50 animate-reverse-spin">
+                                    <div class="p-3 bg-white/90 shadow-lg rounded-xl border border-blue-50 animate-reverse-spin">
                                         <span class="text-2xl">🏠</span>
                                     </div>
                                 </div>
                                 <div class="absolute top-[85%] left-[85%]" style="transform:translate(-50%,-50%);">
-                                    <div class="p-3 bg-white shadow-lg rounded-xl border border-blue-50 animate-reverse-spin">
+                                    <div class="p-3 bg-white/90 shadow-lg rounded-xl border border-blue-50 animate-reverse-spin">
                                         <span class="text-2xl">📍</span>
                                     </div>
                                 </div>
                                 <div class="absolute top-[100%] left-[50%]" style="transform:translate(-50%,-50%);">
-                                    <div class="p-3 bg-white shadow-lg rounded-xl border border-blue-50 animate-reverse-spin">
+                                    <div class="p-3 bg-white/90 shadow-lg rounded-xl border border-blue-50 animate-reverse-spin">
                                         <span class="text-2xl">🦴</span>
                                     </div>
                                 </div>
                                 <div class="absolute top-[85%] left-[15%]" style="transform:translate(-50%,-50%);">
-                                    <div class="p-3 bg-white shadow-lg rounded-xl border border-blue-50 animate-reverse-spin">
+                                    <div class="p-3 bg-white/90 shadow-lg rounded-xl border border-blue-50 animate-reverse-spin">
                                         <span class="text-2xl">💧</span>
                                     </div>
                                 </div>
                                 <div class="absolute top-[50%] left-[0%]" style="transform:translate(-50%,-50%);">
-                                    <div class="p-3 bg-white shadow-lg rounded-xl border border-blue-50 animate-reverse-spin">
+                                    <div class="p-3 bg-white/90 shadow-lg rounded-xl border border-blue-50 animate-reverse-spin">
                                         <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="#021CA4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="12" height="12" rx="1"/><path d="M6 10H2"/><path d="M6 14H2"/><path d="M10 6V2"/><path d="M14 6V2"/><path d="M18 10h4"/><path d="M18 14h4"/><path d="M10 18v4"/><path d="M14 18v4"/></svg>
                                     </div>
                                 </div>
                                 <div class="absolute top-[15%] left-[15%]" style="transform:translate(-50%,-50%);">
-                                    <div class="p-3 bg-white shadow-lg rounded-xl border border-blue-50 animate-reverse-spin">
+                                    <div class="p-3 bg-white/90 shadow-lg rounded-xl border border-blue-50 animate-reverse-spin">
                                         <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 12.572l-7.5 7.428l-7.5-7.428A5 5 0 1 1 12 6.006a5 5 0 1 1 7.5 6.572"/><path d="M5 12h3l2-3 3 6 2-3h4" stroke="#ef4444" stroke-width="2"/></svg>
                                     </div>
                                 </div>
@@ -196,31 +203,31 @@
                                     <div class="h-[64px] w-[3px] bg-gray-800 absolute -right-[13px] top-[100px] rounded-r-lg"></div>
                                     <div class="rounded-[1rem] overflow-hidden w-full h-full bg-slate-100 relative">
                                         <!-- Screen Content -->
-                                        <div class="bg-amber-400 h-12 p-2 text-white rounded-b-xl">
-                                            <div class="flex justify-between items-center mt-1">
+                                        <div class="bg-amber-400 h-12 p-1.5 text-white rounded-b-xl">
+                                            <div class="flex justify-between items-center mt-0.5">
                                                 <div>
-                                                    <div class="text-[9px] opacity-80 leading-tight">Good Morning,</div>
-                                                    <div class="font-bold text-[13px] leading-tight">Buddy is Active</div>
+                                                    <div class="text-[7px] opacity-80 leading-tight">Good Morning,</div>
+                                                    <div class="font-bold text-[11px] leading-tight whitespace-nowrap">Buddy is Active</div>
                                                 </div>
-                                                <div class="h-7 w-7 bg-white/20 rounded-full flex items-center justify-center">
-                                                    <i data-lucide="menu" class="h-4 w-4"></i>
+                                                <div class="h-4 w-4 bg-white/20 rounded-full flex items-center justify-center">
+                                                    <i data-lucide="menu" class="h-2.5 w-2.5"></i>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="p-1.5 space-y-1.5 -mt-2">
-                                            <div class="bg-white p-1.5 rounded-md shadow flex items-center justify-between">
-                                                <div class="flex items-center space-x-1.5">
-                                                    <div class="bg-green-100 p-1 rounded">
-                                                        <i data-lucide="heart-pulse" class="h-3 w-3 text-green-600"></i>
+                                        <div class="p-1 space-y-2 -mt-2">
+                                            <div class="bg-white p-1 rounded-md shadow flex items-center justify-between">
+                                                <div class="flex items-center space-x-1">
+                                                    <div class="bg-green-100 p-0.5 rounded">
+                                                        <i data-lucide="heart-pulse" class="h-2.5 w-2.5 text-green-600"></i>
                                                     </div>
                                                     <div>
-                                                        <div class="text-[7px] text-gray-500 leading-none">Heart Rate</div>
-                                                        <div class="font-bold text-[9px] text-slate-800 leading-none">78 BPM</div>
+                                                        <div class="text-[6px] text-gray-500 leading-none">Heart Rate</div>
+                                                        <div class="font-bold text-[7px] text-slate-800 leading-none">78 BPM</div>
                                                     </div>
                                                 </div>
-                                                <div class="text-[7px] text-green-600 bg-green-50 px-1.5 py-0.5 rounded">Normal</div>
+                                                <div class="text-[6px] text-green-600 bg-green-50 px-1 py-0.5 rounded">Normal</div>
                                             </div>
-                                            <div class="rounded-md shadow overflow-hidden h-7 relative">
+                                            <div class="rounded-md shadow overflow-hidden h-16 relative">
                                                 <div class="absolute inset-0 flex items-center justify-center bg-center bg-cover bg-no-repeat" style="background-image: url('../furryWatch/Images/dog-barking-home.jpg');">
                                                     <i data-lucide="play-circle" class="h-3 w-3 text-white opacity-80"></i>
                                                 </div>
@@ -281,7 +288,7 @@
                 </div>
 
                 <!-- Minimalist Divider -->
-                <div class="h-16 w-px bg-gradient-to-b from-slate-200 to-transparent"></div>
+                <!-- <div class="h-16 w-px bg-gradient-to-b from-slate-200 to-transparent"></div> -->
 
                 <!-- Vision -->
                 <div class="max-w-4xl">
@@ -370,7 +377,7 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div id="app-slides-scroll" class="flex flex-row gap-8 overflow-x-auto snap-x snap-mandatory scrollbar-hide" style="scroll-behavior: smooth; -webkit-overflow-scrolling: touch;">
                                         <!-- Slide 1 -->
-                                        <div class="min-w-full snap-center">
+                                        <section class="min-w-full snap-center">
                                             <div class="app-slide-glass p-6 md:p-12 h-full flex items-center">
                                                 <div class="lg:grid lg:grid-cols-2 gap-16 items-center w-full">
                             <div>
@@ -475,7 +482,7 @@
                             </div>
                                                 </div>
                                             </div>
-                    </div>
+                                        </section>
                                         <!-- Slide 2 -->
                                         <section class="min-w-full snap-center">
                                             <div class="app-slide-glass p-6 md:p-12 h-full flex items-center">
@@ -584,7 +591,7 @@
                                             </div>
                                         </section>
                                         <!-- Slide 3 -->
-                                        <div class="min-w-full snap-center">
+                                        <section class="min-w-full snap-center">
                                             <div class="app-slide-glass p-6 md:p-12 h-full flex items-center">
                                                 <div class="lg:grid lg:grid-cols-2 gap-16 items-center w-full">
                             <div>
@@ -689,9 +696,9 @@
                             </div>
                                                 </div>
                                             </div>
-                    </div>
+                                        </section>
                                         <!-- Slide 4 -->
-                                        <div class="min-w-full snap-center">
+                                        <section class="min-w-full snap-center">
                                             <div class="app-slide-glass p-6 md:p-12 h-full flex items-center">
                                                 <div class="lg:grid lg:grid-cols-2 gap-16 items-center w-full">
                             <div>
@@ -800,7 +807,7 @@
                             </div>
                                                 </div>
                                             </div>
-                    </div>
+                                        </section>
         </div>
         
       </div>
@@ -1096,23 +1103,38 @@ As long as the collar has LTE connectivity, you can track your pet’s location 
             });
         });
 
-        // App Showcase Pagination Dashes
+        // App Showcase Pagination Dashes (dynamic, robust)
         const appSlidesScroll = document.getElementById('app-slides-scroll');
+        const appSlides = appSlidesScroll ? Array.from(appSlidesScroll.children).filter(el => el.classList.contains('min-w-full')) : [];
         const appDashes = document.querySelectorAll('.app-dash');
-        if (appSlidesScroll && appDashes.length === 4) {
-            appSlidesScroll.addEventListener('scroll', () => {
-                const slideWidth = appSlidesScroll.offsetWidth;
-                const scrollLeft = appSlidesScroll.scrollLeft;
-                const idx = Math.round(scrollLeft / slideWidth);
-                appDashes.forEach((dash, i) => {
-                    dash.classList.toggle('active', i === idx);
-                });
+        function updateActiveDash() {
+            if (!appSlidesScroll || appSlides.length === 0) return;
+            const slideWidth = appSlides[0].offsetWidth;
+            const scrollLeft = appSlidesScroll.scrollLeft;
+            // Find the closest slide
+            let idx = 0;
+            let minDist = Infinity;
+            appSlides.forEach((slide, i) => {
+                const dist = Math.abs(scrollLeft - i * slideWidth);
+                if (dist < minDist) {
+                    minDist = dist;
+                    idx = i;
+                }
             });
             appDashes.forEach((dash, i) => {
+                dash.classList.toggle('active', i === idx);
+            });
+        }
+        if (appSlidesScroll && appSlides.length && appDashes.length) {
+            appSlidesScroll.addEventListener('scroll', updateActiveDash);
+            appDashes.forEach((dash, i) => {
                 dash.addEventListener('click', () => {
-                    appSlidesScroll.scrollTo({ left: i * appSlidesScroll.offsetWidth, behavior: 'smooth' });
+                    const slideWidth = appSlides[0].offsetWidth;
+                    appSlidesScroll.scrollTo({ left: i * slideWidth, behavior: 'smooth' });
                 });
             });
+            // Initial state
+            updateActiveDash();
         }
     </script>
 </body>
